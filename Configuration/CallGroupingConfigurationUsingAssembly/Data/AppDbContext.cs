@@ -1,4 +1,5 @@
-﻿using CallGroupingConfigurationUsingAssembly.Entities;
+﻿using CallGroupingConfigurationUsingAssembly.Data.Config;
+using CallGroupingConfigurationUsingAssembly.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
