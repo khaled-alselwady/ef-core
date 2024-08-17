@@ -8,5 +8,7 @@
 
         public int? OfficeId { get; set; }
         public Office? Office { get; set; }
+
+        public ICollection<Section> Sections { get; set; } = [];
     }
 }
