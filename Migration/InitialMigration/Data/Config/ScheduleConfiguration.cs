@@ -1,4 +1,5 @@
 ﻿using InitialMigration.Entities;
+using InitialMigration.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -12,9 +13,10 @@ namespace InitialMigration.Data.Config
             builder.Property(x => x.Id).ValueGeneratedNever();
 
             builder.Property(x => x.Title)
-                .HasColumnType("varchar")
-                .HasMaxLength(50)
-                .IsRequired();
+                 .HasConversion(
+                    x => x.ToString(),
+                    x => (ScheduleEnum)Enum.Parse(typeof(ScheduleEnum), x)
+                );
 
             builder.ToTable("Schedules");
         }
