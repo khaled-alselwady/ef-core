@@ -15,20 +15,6 @@ namespace InitialMigration.Data.Config
             builder.Property(x => x.Price).HasPrecision(15, 2);
 
             builder.ToTable("Courses");
-
-            builder.HasData(LoadCourses());
-        }
-
-        private static List<Course> LoadCourses()
-        {
-            return
-            [
-                new Course { Id = 1, Name = "Mathematics", Price = 1000m},
-                new Course { Id = 2, Name = "Physics", Price = 2000m},
-                new Course { Id = 3, Name = "Chemistry", Price = 1500m},
-                new Course { Id = 4, Name = "Biology", Price = 1200m},
-                new Course { Id = 5, Name = "CS-50", Price = 3000m},
-            ];
         }
     }
 }

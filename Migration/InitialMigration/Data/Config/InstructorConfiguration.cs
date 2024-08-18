@@ -26,20 +26,6 @@ namespace InitialMigration.Data.Config
                    .IsRequired(false);
 
             builder.ToTable("Instructors");
-
-            builder.HasData(LoadInstructors());
-        }
-
-        private List<Instructor> LoadInstructors()
-        {
-            return
-            [
-                new Instructor { Id = 1, FName = "Ahmed", LName = "Abdullah", OfficeId = 1},
-                new Instructor { Id = 2, FName = "Yasmeen", LName = "Yasmeen", OfficeId = 2},
-                new Instructor { Id = 3, FName = "Khalid", LName = "Hassan", OfficeId = 3},
-                new Instructor { Id = 4, FName = "Nadia", LName = "Ali", OfficeId = 4},
-                new Instructor { Id = 5, FName = "Ahmed", LName = "Abdullah", OfficeId = 5},
-            ];
         }
     }
 }

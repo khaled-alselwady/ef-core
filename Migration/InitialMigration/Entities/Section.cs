@@ -13,9 +13,12 @@
 
         public int ScheduleId { get; set; }
         public Schedule Schedule { get; set; }
+
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
 
+
         public ICollection<Student> Students { get; set; } = [];
     }
+
 }
