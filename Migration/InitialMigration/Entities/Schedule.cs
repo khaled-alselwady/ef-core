@@ -13,6 +13,5 @@
         public bool SAT { get; set; }
 
         public ICollection<Section> Sections { get; set; } = [];
-        public ICollection<SectionSchedule> SectionSchedules { get; set; } = [];
     }
 }
