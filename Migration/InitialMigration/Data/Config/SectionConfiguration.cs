@@ -25,6 +25,12 @@ namespace InitialMigration.Data.Config
                    .HasForeignKey(x => x.InstructorId)
                    .IsRequired(false);
 
+            builder.OwnsOne(x => x.TimeSlot, ts =>
+            {
+                ts.Property(p => p.StartTime).HasColumnType("time").HasColumnName("StartTime");
+                ts.Property(p => p.EndTime).HasColumnType("time").HasColumnName("EndTime");
+            });
+
             builder.HasOne(x => x.Schedule)
                 .WithMany(x => x.Sections)
                 .HasForeignKey(x => x.ScheduleId)

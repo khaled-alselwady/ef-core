@@ -14,11 +14,14 @@
         public int ScheduleId { get; set; }
         public Schedule Schedule { get; set; }
 
-        public TimeSpan StartTime { get; set; }
-        public TimeSpan EndTime { get; set; }
-
+        public TimeSlot TimeSlot { get; set; }
 
         public ICollection<Student> Students { get; set; } = [];
     }
 
+    public class TimeSlot
+    {
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
+    }
 }
